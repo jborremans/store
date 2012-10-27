@@ -2,7 +2,34 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
+
+<h1>Your Quote of the Day</h1>
+
+<!-- Sharethis -->
+
+<span class='st_sharethis_large' displayText='ShareThis'></span>
+<span class='st_twitter_large' displayText='Tweet'></span>
+<span class='st_facebook_large' displayText='Facebook'></span>
+<span class='st_linkedin_large' displayText='LinkedIn'></span>
+<span class='st_evernote_large' displayText='Evernote'></span>
+<span class='st_email_large' displayText='Email'></span>
+<div class='post-footer'>
+
+<!-- iHeartquotes -->
+
+<iframe width="230" 
+  height="250"
+  frameborder="0"
+  scrolling="no"         src="http://iheartquotes.com/api/v1/random?format=html&max_lines=4&max_characters=320&width=225&height=165">
+<a href="http://iheartquotes.com/fortune/random">Random Quote</a>
+</iframe>
+
+
 <h1>Your Pragmatic Catalog</h1>
+</br>
+</br>
+
+<!-- list of products -->
 
 <% @products.each do |product| %>
   <div class="entry">
@@ -10,7 +37,7 @@
     <h3><%= product.title %></h3>
     <p><%= sanitize(product.description) %></p>
     <div class="price_line">
-      <!-- START:currency -->
+<!-- START:currency -->
       <span class="price"><%= number_to_currency(product.price) %></span>
       <%= button_to 'Add to Cart', line_items_path(:product_id => product) %>
     </div>
