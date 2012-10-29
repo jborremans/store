@@ -68,12 +68,12 @@
 /* Styles for main page */
 
 #banner {
-  background: #9c9;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid;
-  font: small-caps 40px/40px "Times New Roman", serif;
-  color: #282;
+  background: #FAF8F5;
+  padding-top: 20px;
+  padding-bottom: 70px;
+  border-bottom: 4px solid;
+  font: small-caps 60px/60px "Times New Roman", serif;
+  color: #465263;
   text-align: center;
 }
 
@@ -82,7 +82,7 @@
 }
 
 #columns {
-  background: #141;
+  background: #92bef1;
 }
 
 #main {
@@ -100,11 +100,11 @@
   padding-left: 1em;
   padding-bottom: 1em;
   width: 16em;
-  background: #141;
+  background: #92bef1;
 }
 
 #side a {
-  color: #bfb;
+  color: white;
   font-size: small;
 }
 /* END:mainlayout */
@@ -161,3 +161,18 @@
   display: inline;
 }
 /* END:inline */
+
+/*Styles for the cart in the main page*/
+
+#store .cart_title {
+	font: 120% bold;
+}
+
+#store .item_price, #store .total_line {
+	text-align: right; 
+}
+
+#store .total_line .total_cell {
+	font-weight: bold;
+	border-top: 1px solid #595;
+}
