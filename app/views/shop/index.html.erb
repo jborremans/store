@@ -18,9 +18,9 @@
 <!-- iHeartquotes -->
 
 <iframe width="300" 
-  height="125"
+  height="150"
   frameborder="0"
-  scrolling="no"         src="http://iheartquotes.com/api/v1/random?format=html&max_lines=6&max_characters=320&width=225&height=165">
+  scrolling="no"         src="http://iheartquotes.com/api/v1/random?format=html&max_lines=6&max_characters=320&width=225&height=265">
 <a href="http://iheartquotes.com/fortune/random">Random Quote</a>
 </iframe>
 
@@ -34,11 +34,13 @@
   <div class="entry">
     <%= image_tag(product.image_url) %>
     <h3><%= product.title %></h3>
-    <p><%= sanitize(product.description) %></p>
+    <%= sanitize(product.description) %>
     <div class="price_line">
-<!-- START:currency -->
       <span class="price"><%= number_to_currency(product.price) %></span>
-      <%= button_to 'Add to Cart', line_items_path(:product_id => product) %>
+<!-- START_HIGHLIGHT -->
+      <%= button_to 'Add to Cart', line_items_path(:product_id => product),
+        :remote => true %>
+<!-- END_HIGHLIGHT -->
     </div>
   </div>
 <% end %>
